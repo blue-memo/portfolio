@@ -1,0 +1,71 @@
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+
+:root {
+  --ink:    #0A0908;
+  --paper:  #F2EFE9;
+  --off:    #1A1814;
+  --muted:  rgba(242,239,233,0.65);
+  --rule:   rgba(242,239,233,0.14);
+  --accent: #a647ff;
+  --accent2:#FF3CAC;
+  --accent3:#00F5D4;
+  --ff-head: 'Bebas Neue', sans-serif;
+  --ff-body: 'Newsreader', serif;
+  --ff-mono: 'DM Mono', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  cursor: none;
+  font-size: 16px;
+}
+
+body {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--ff-body);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.7;
+}
+
+a, button {
+  cursor: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  border-radius: 1000px;
+  background: #00002a;
+  height: 3px;
+  width: 5px;
+}
+
+::-webkit-scrollbar-corner {
+  opacity: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 15px;
+  height: 35%;
+  background: linear-gradient(#002, #9900ff93, #002);
+}
+img{ 
+display:block; 
+max-width:100%; 
+}
+::selection{ 
+background:var(--accent); 
+color:var(--ink);
+}

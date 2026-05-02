@@ -1,0 +1,121 @@
+.s-skills {
+  background: var(--off);
+  border-top: 1px solid var(--rule);
+}
+
+.skills-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.skill-bars {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity .6s .1s, transform .6s .1s;
+}
+
+.skill-bars.in { opacity: 1; transform: none; }
+
+.sb-item { margin-bottom: 1.8rem; }
+
+.sbi-head {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  margin-bottom: .5rem;
+}
+
+.sbi-glyph { font-size: 1rem; }
+
+.sbi-name {
+  font-family: var(--ff-mono);
+  font-size: .7rem;
+  color: var(--paper);
+  letter-spacing: .1em;
+  flex: 1;
+}
+
+.sbi-pct {
+  font-family: var(--ff-head);
+  font-size: 1.2rem;
+  color: var(--muted);
+  min-width: 3rem;
+  text-align: right;
+}
+
+.sbi-track {
+  position: relative;
+  height: 3px;
+  background: rgba(255,255,255,.08);
+  border-radius: 0;
+  overflow: visible;
+}
+
+.sbi-fill {
+  height: 100%;
+  transition: width .9s cubic-bezier(.16,1,.3,1);
+  position: relative;
+  z-index: 1;
+}
+
+.sbi-glow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 8px;
+  filter: blur(6px);
+  opacity: .5;
+  transition: width .9s cubic-bezier(.16,1,.3,1);
+}
+
+.skill-orbit {
+  opacity: 0;
+  transform: scale(.9);
+  transition: opacity .7s .2s, transform .7s .2s;
+}
+
+.skill-orbit.in { opacity: 1; transform: none; }
+
+.orbit-svg {
+  width: 100%;
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+.orbit-center-text {
+  font-family: var(--ff-head);
+  font-size: 18px;
+  fill: var(--accent);
+  letter-spacing: 2px;
+}
+
+.manifesto-tape {
+  overflow: hidden;
+  border-top: 1px solid var(--rule);
+  padding: .4rem 0;
+  margin-top: 2rem;
+}
+
+.mt-track {
+  display: flex;
+  white-space: nowrap;
+  gap: 3rem;
+  animation: mtTick 22s linear infinite;
+}
+
+.mt-word {
+  font-family: var(--ff-head);
+  font-size: 1.3rem;
+  color: rgba(255,255,255,.25);
+  letter-spacing: .1em;
+  flex-shrink: 0;
+}
+
+@keyframes mtTick {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-33.33%); }
+}
